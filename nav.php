@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-light  navbar-dark bg-dark text-light">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark">
+    <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_alternador" aria-controls="navbar_alternador" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,14 +10,20 @@
                     <a class="nav-link" href="index.php">Inicial</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sobre.pho">Sobre</a>
+                    <a class="nav-link" href="sobre.php">Sobre</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cadastro.php">Cadastro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Cadastro</a>
-                </li>
+                <?php if (!isset($_SESSION['logged'])) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.php">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Login</a>
+                    </li>
+                <?php else :  ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>

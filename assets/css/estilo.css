@@ -8,48 +8,58 @@ body {
 }
 
 div {
-   padding: 10px;
+  padding: 10px;
 }
 
 /* Grid System*/
 .container {
   max-width: 1130px;
-     border: 1px solid red;
+  border: 1px solid white;
   margin: 0 auto;
 }
+
 .grid {
   display: grid;
 }
+
 .grid div {
-    border: 1px solid green;
+  /* border: 1px solid green; */
 }
-.grid > div {
-    border: 1px solid pink;
+
+.grid>div {
+  /* border: 1px solid pink; */
 }
+
 .grid.col-2 {
   grid-template-columns: 1fr 1fr;
 }
+
 .grid.col-3 {
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .grid.col-3-sidebar {
   grid-template-columns: 2fr 1fr 1fr;
 }
-@media (min-width: 768px) {
-}
+
+@media (min-width: 768px) {}
+
 @media (max-width: 768px) {
   .grid.col-2 {
     grid-template-columns: 1fr;
   }
 }
+
 .text-center {
   text-align: center;
 }
+
 /* Cabeçalho / Menu */
 .menu {
   display: flex;
   justify-content: space-around;
 }
+
 .menu a {
   text-decoration: none;
   color: black;
